@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.er.transporteapi.model.Itinerario;
+import com.er.transporteapi.model.Example;
 
 @SpringBootTest
 class TransportePublicoApiApplicationTests {
@@ -29,8 +29,8 @@ class TransportePublicoApiApplicationTests {
 			  .queryParam("fields", "nome")
 			  .build();
 		  
-		  ResponseEntity<Itinerario> itinerario =
-		  template.getForEntity(uri.toUriString(), Itinerario.class);
+		  ResponseEntity<Example> itinerario =
+		  template.getForEntity(uri.toUriString(), Example.class);
 		  
 		  System.out.println(uri);
 		  
