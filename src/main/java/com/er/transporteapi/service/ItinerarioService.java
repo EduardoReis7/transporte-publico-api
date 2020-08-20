@@ -12,7 +12,7 @@ import com.er.transporteapi.model.Example;
 @Service
 public class ItinerarioService {
 	
-	private static final UriComponents URI = UriComponentsBuilder.newInstance() .scheme("https")
+	private final UriComponents URI = UriComponentsBuilder.newInstance() .scheme("https")
 			.host("dadosabertos.poa.br") .path("api/3/action/datastore_search")
 			.queryParam("resource_id", "c8cf58cf-649c-49b1-af78-d0e0beeb6332")
 			.queryParam("fields", "_id") .queryParam("fields", "linha")
